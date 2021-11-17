@@ -1,0 +1,16 @@
+#声明配置中心的端口号
+server:
+  port: 12000
+#声明配置中心的微服务名称
+#如果注册Eureka服务器上,也被称为微服务Id(service-id)
+spring:
+  application:
+    name: config-server
+  #github远程仓库的uri
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/johnny6865/springcloud-config-center.git
+          #不能省略
+          default-label: main
